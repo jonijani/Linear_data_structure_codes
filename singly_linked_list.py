@@ -30,6 +30,30 @@ class SinglyLL:
         while temp.next != None:
             temp = temp.next
         temp.next = new_node
+
+    def add_new_node_at_index(self, new_node, position):  #  value=7  position 18 
+        if self.is_empty():
+            if position == 0:
+                self.head = new_node
+            else:
+                #print('index out of range ')
+                raise Exception('index out of range ')
+            return
+            
+
+        index = 0
+        previous = None
+        temp = self.head
+        
+        while index != position:
+            if temp.next == None:
+                #print('index out of range')
+                raise Exception('index out of range ')
+            previous = temp
+            temp = temp.next
+            index += 1
+        previous.next = new_node
+        new_node.next = temp.next
         
 
 
@@ -62,6 +86,8 @@ if __name__ == "__main__":
     ll.add_new_node_at_end(node3)
     ll.add_new_node_at_end(node4)
     ll.add_new_node_at_end(node5)
+
+    ll.add_new_node_at_index(node7,3)
 
     ll.print_ll()
         
