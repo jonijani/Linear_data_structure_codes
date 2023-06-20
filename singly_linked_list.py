@@ -54,6 +54,13 @@ class SinglyLL:
             index += 1
         previous.next = new_node
         new_node.next = temp.next
+
+    def update_first_node(self,new_value):
+        if self.is_empty():
+            print('No node in linked list to update') 
+            return
+        self.head.value = new_value
+        return
         
 
 
@@ -88,6 +95,8 @@ if __name__ == "__main__":
     ll.add_new_node_at_end(node5)
 
     ll.add_new_node_at_index(node7,3)
+
+    ll.update_first_node('1_first_node_updated')
 
     ll.print_ll()
         
