@@ -71,6 +71,26 @@ class SinglyLL:
             temp = temp.next
         temp.value = new_value
         return
+    
+    def update_node_value_at_index(self,new_value,position):
+        if self.is_empty():
+            print('linked list is empty')
+            return
+        
+        if position == 0:
+            self.head.value = new_value
+            return
+
+        index = 0
+        previous = None
+        temp = self.head
+        while index != position:
+            previous = temp
+            temp = temp.next
+            index += 1
+        previous.next.value = new_value
+        return
+    
         
 
 
@@ -108,7 +128,10 @@ if __name__ == "__main__":
 
     #ll.update_first_node('1_first_node_updated')
 
-    ll.update_last_node('5_last_node_updated')
+    #ll.update_last_node('5_last_node_updated')
+
+    ll.update_node_value_at_index('New_value_on_this_index ',1)
+
 
     ll.print_ll()
         
