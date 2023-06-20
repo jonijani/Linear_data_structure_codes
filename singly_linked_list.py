@@ -13,6 +13,16 @@ class SinglyLL:
         else:
             return False
         
+
+    def Add_new_node_at_start(self, new_node):
+        if self.is_empty():
+            self.head = new_node
+            return
+        new_node.next = self.head
+        self.head = new_node
+        
+
+        
     def print_ll(self):
         if self.is_empty():
             print("list is Empty")
