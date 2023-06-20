@@ -22,7 +22,7 @@ class SinglyLL:
         self.head = new_node
         
 
-        
+
     def print_ll(self):
         if self.is_empty():
             print("list is Empty")
@@ -34,5 +34,19 @@ class SinglyLL:
         
 if __name__ == "__main__":
     ll = SinglyLL()
+
+    node1 = Node(2)
+    node2 = Node(2)
+    node3 = Node(3)
+    node4 = Node(2)
+    node5 = Node(2)
+    node6 = Node(4)
+    node7 = Node("node7")
+
+    ll.Add_new_node_at_start(node1)
+    ll.Add_new_node_at_start(node2)
+    ll.Add_new_node_at_start(node3)
+
+    ll.print_ll()
         
 
