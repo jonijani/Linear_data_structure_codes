@@ -45,6 +45,41 @@ class CircularSinglyLinkedList:
     new_node.next = self.head
     return
   
+  def add_new_node_at_index(self,new_node,position):
+    if self.is_empty():
+      self.head = new_node
+      new_node.next = self.head
+      return
+    temp = self.head 
+    #if node needs to be added at index 0 
+    if position == 0:
+      new_node.next = self.head
+      while True:
+        temp = temp.next
+        if temp.next == self.head:
+          break
+      last_node = temp
+      last_node.next = new_node
+      self.head = new_node
+      return
+    
+    # if node needs to be added at different index 
+    index = 0
+    prev = None
+    temp = self.head
+    while index < position and temp.next != self.head :
+      prev = temp
+      temp = temp.next
+      index += 1
+    prev.next = new_node
+    new_node.next = temp
+    if position > index:
+      raise Exception('index out of range ')
+    # if index number is lat node in linked list
+    if temp == self.head:
+      new_node.next = self.head
+    return
+  
 
 
 
