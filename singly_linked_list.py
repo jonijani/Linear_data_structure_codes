@@ -91,6 +91,45 @@ class SinglyLL:
         previous.next.value = new_value
         return
     
+        # Remove first node ,last node, and specific index of node
+    def remove_first_node(self):
+        if self.head == None:
+            print('Linked is empty ')
+            return
+        self.head = self.head.next
+        return
+    
+    def remove_last_node(self):
+        if self.is_empty():
+            print('Linked list is empty')
+            return
+        temp = self.head
+        while temp.next.next != None:
+            temp = temp.next
+        temp.next = None
+        return
+    
+    def remove_node_at_index(self,position):
+        if self.is_empty():
+            print('Linked list is empty ')
+
+        if position == 0:
+            temp = self.head
+            temp = temp.next
+            self.head = temp
+            return
+        
+        index = 0
+        previous = None
+        temp = self.head
+        while index != position:
+            previous = temp
+            temp = temp.next
+            index += 1
+        previous.next = temp.next
+        return
+    
+    
         
 
 
