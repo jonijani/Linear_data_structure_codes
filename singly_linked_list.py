@@ -129,6 +129,38 @@ class SinglyLL:
         previous.next = temp.next
         return
     
+    def get_index_number_of_value(self,value): # value 4
+        if self.head == None:
+            raise Exception('Linked list is empty')
+        
+        temp = self.head # points to 1st node 
+        index = 0
+        while temp.value != value:
+            if temp.next == None:
+                raise Exception('Node value is not available in Linked list')
+            temp = temp.next
+            index += 1
+        return index
+    
+
+
+
+    # =====================================================
+    # write function to find count of that given value
+    def get_count_of_given_node_value(self,value):
+        if self.is_empty():
+            raise Exception('inked list is empty') 
+        count = 0
+        temp = self.head
+        if temp.value == value:
+            count += 1
+        while temp.next != None:
+            if temp.next.value == value:
+                count += 1
+            temp = temp.next
+        return count
+    
+    
     
         
 
