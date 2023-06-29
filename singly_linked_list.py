@@ -203,6 +203,13 @@ if __name__ == "__main__":
 
     ll.update_node_value_at_index('New_value_on_this_index ',1)
 
+     #ll.remove_first_node()
+    #ll.remove_last_node()
+    #ll.remove_node_at_index(1)
+
+    #print(ll.get_index_number_of_value('1st'))
+    print(ll.get_count_of_given_node_value(12))
+
 
     ll.print_ll()
         
