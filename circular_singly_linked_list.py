@@ -79,28 +79,9 @@ class CircularSinglyLinkedList:
     if temp == self.head:
       new_node.next = self.head
     return
+
+
   
-
-
-
-
-
-
-
-    
-
-    
-        
-
-    
-      
-    
-    
-    
-    
-    
-        
-        
 
 
 
@@ -129,6 +110,7 @@ if __name__ == "__main__":
   node4 = Node(4)
   node5 = Node(5)
   node6 = Node('hello')
+  node7 = Node(7)
 
   csll = CircularSinglyLinkedList()
 
@@ -137,6 +119,7 @@ if __name__ == "__main__":
   csll.add_new_node_in_end(node3)
   csll.add_new_node_in_end(node4)
   csll.add_new_node_in_end(node5)
+  csll.add_new_node_in_end(node7)
 
 #   csll.add_new_node_at_start(node1)
 #   csll.add_new_node_at_start(node2)
