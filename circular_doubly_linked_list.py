@@ -31,6 +31,24 @@ class CircularDoubly:
         first_node.pre = new_node
         self.head = new_node
         return
+    
+    def add_new_node_at_end(self, new_node):
+        if self.is_empty():
+            new_node.next = new_node
+            new_node.pre = new_node
+            self.head = new_node
+            return
+
+        temp = self.head
+        first_node = temp
+        last_node = temp.pre
+
+        last_node.next = new_node
+        new_node.next = first_node
+        new_node.pre = last_node
+        first_node.pre = new_node
+        return
+
 
 
         
@@ -41,7 +59,7 @@ class CircularDoubly:
         while True:
             print(temp.value)
             temp = temp.next
-            if temp.next == self.head:
+            if temp == self.head:
                 break
 
     
@@ -53,10 +71,22 @@ if __name__ == "__main__":
     node5 = Node(5)
 
     c_d_l_l = CircularDoubly()
-    c_d_l_l.add_new_node_at_start(node1)
-    c_d_l_l.add_new_node_at_start(node2)
-    c_d_l_l.add_new_node_at_start(node3)
-    c_d_l_l.add_new_node_at_start(node4)
-    c_d_l_l.add_new_node_at_start(node5)
+    # c_d_l_l.add_new_node_at_start(node1)
+    # c_d_l_l.add_new_node_at_start(node2)
+    # c_d_l_l.add_new_node_at_start(node3)
+    # c_d_l_l.add_new_node_at_start(node4)
+    # c_d_l_l.add_new_node_at_start(node5)
+
+    c_d_l_l.add_new_node_at_end(node1)
+    c_d_l_l.add_new_node_at_end(node2)
+    c_d_l_l.add_new_node_at_end(node3)
+    c_d_l_l.add_new_node_at_end(node4)
+    c_d_l_l.add_new_node_at_end(node5)
+
+
+
+
+
+
 
     c_d_l_l.print_all()
