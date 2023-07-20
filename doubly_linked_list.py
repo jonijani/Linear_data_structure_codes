@@ -23,6 +23,17 @@ class DoublyLinkedList:
     new_node.next = first_node
     first_node.pre = new_node
     self.head = new_node
+
+  def add_new_node_at_end(self, new_node):
+    if self.is_empty():
+      self.head = new_node
+      return
+    temp = self.head
+    while temp.next != None:
+      temp = temp.next
+    temp.next = new_node
+    new_node.pre = temp
+    return
     
 
 
@@ -51,3 +62,13 @@ if __name__ == "__main__":
   node5 = Node(5)
   node6 = Node('hello')
   doubly_l_l = DoublyLinkedList()
+
+  doubly_l_l.add_new_node_at_start(node1)
+  doubly_l_l.add_new_node_at_start(node2)
+  doubly_l_l.add_new_node_at_start(node3)
+
+  doubly_l_l.add_new_node_at_end(node1)
+  doubly_l_l.add_new_node_at_end(node2)
+  doubly_l_l.add_new_node_at_end(node3)
+  doubly_l_l.add_new_node_at_end(node4)
+  doubly_l_l.add_new_node_at_end(node5)
