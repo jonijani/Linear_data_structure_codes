@@ -85,6 +85,19 @@ class DoublyLinkedList:
 
     temp.next,temp.pre = None,None
     return
+  
+  def add_new_node_between_linked_list(self, new_node, value1, value2):
+    if self.is_empty():
+      self.head = new_node
+      return
+    temp = self.head
+    while temp.next != None:
+      if temp.value == value1 and temp.next.value == value2:
+        new_node.next = temp.next
+        new_node.pre = temp
+        temp.next = new_node
+        return
+      temp = temp.next
     
 
 
