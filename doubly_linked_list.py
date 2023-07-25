@@ -98,6 +98,13 @@ class DoublyLinkedList:
         temp.next = new_node
         return
       temp = temp.next
+
+  def remove_first_node_in_doubly_ll(self):
+    if self.is_empty():
+      raise Exception('Nothing to remove in dll')
+    temp = self.head
+    self.head = temp.next
+    return
     
 
 
