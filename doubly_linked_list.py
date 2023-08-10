@@ -106,6 +106,15 @@ class DoublyLinkedList:
     self.head = temp.next
     return
     
+  def remove_last_node_in_doubly_ll(self):
+    if self.is_empty():
+      raise Exception('Nothing to remove in dll')
+    temp = self.head
+    while temp.next.next != None:
+      temp = temp.next
+    temp.next.pre = None
+    temp.next = None
+    return
 
 
 
