@@ -117,6 +117,27 @@ class DoublyLinkedList:
     return
 
 
+  def remove_given_index_node_in_doubly_ll(self, position):
+    if self.is_empty():
+      print('Nothing to remove in list')
+      return
+    if position == 0:
+      temp = self.head
+      self.head = temp.next
+      return
+
+    index = 0
+    temp = self.head
+    prev = None
+    while index != position:  #  index012 |   position 2
+      prev = temp
+      temp = temp.next
+      index += 1
+    prev.next = None
+    temp.pre = None
+    prev.next = temp.next
+    return
+
 
 
 
