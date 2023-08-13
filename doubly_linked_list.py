@@ -137,7 +137,14 @@ class DoublyLinkedList:
     temp.pre = None
     prev.next = temp.next
     return
-
+  
+  
+  def update_first_node_in_ll(self, new_value):
+    if self.is_empty():
+      print('Cant update first node as its empty')
+      return
+    self.head.value = new_value
+    return
 
 
 
@@ -150,6 +157,8 @@ class DoublyLinkedList:
       print(temp.value)
       temp = temp.next
     return
+  
+
   
 
 
