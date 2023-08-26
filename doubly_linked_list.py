@@ -157,6 +157,24 @@ class DoublyLinkedList:
     temp.value = new_value
     return
   
+  def update_given_index_node_in_ll(self, new_value, position):
+    if self.is_empty():
+      print('Cant update given index value as doubly ll is empty')
+      return
+    if position == 0:
+      self.head.value = new_value
+      return
+
+    index = 0
+    temp = self.head
+    while index != position:  #index 0123   | position 3
+      if temp.next == None:
+        print('Given index is out of range')
+      temp = temp.next
+      index += 1
+    temp.value = new_value
+    return
+
 
 
 
