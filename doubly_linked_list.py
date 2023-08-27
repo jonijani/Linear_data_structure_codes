@@ -175,6 +175,18 @@ class DoublyLinkedList:
     temp.value = new_value
     return
 
+  def get_index_number_of_given_value(self, value):
+    if self.is_empty():
+      print('Cant find index number as doubly ll is empty')
+      return
+    index = 0
+    temp = self.head
+    while temp.value != value:
+      if temp.next == None:
+        print('index can not find given value index as its not available')
+      temp = temp.next
+      index += 1
+    return index
 
 
 
