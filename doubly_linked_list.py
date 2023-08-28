@@ -188,6 +188,18 @@ class DoublyLinkedList:
       index += 1
     return index
 
+  def count_given_value_in_dll(self,value):
+    if self.is_empty():
+      print('No nodes to count values ')
+      return
+    temp = self.head
+    count = 0
+    while temp != None:
+      if temp.value == value:
+        count += 1
+      temp = temp.next
+    return count
+
 
 
   def print_all(self):
