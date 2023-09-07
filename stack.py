@@ -4,7 +4,7 @@ class Stack:
 
     # is Empty
     def is_empty(self):
-        if self.list == None:
+        if self.list == []:
             return True
         else:
             return False
