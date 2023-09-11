@@ -13,6 +13,12 @@ class Stack:
     def add_element(self,value):
         self.list.append(value)
         return 'value added to stack list'
+    
+        # pop method
+    def pop_last_element(self):
+        if self.is_empty():
+            print('stack list is empty')
+        return self.list.pop()
 
 
 
