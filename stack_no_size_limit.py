@@ -19,6 +19,12 @@ class Stack:
         if self.is_empty():
             print('stack list is empty')
         return self.list.pop()
+    
+        # get top element    
+    def get_peek_element(self):
+        if self.is_empty():
+            print('stack list is empty')
+        return self.list[len(self.list)-1]
 
 
 
