@@ -26,6 +26,10 @@ class Stack:
             print('stack list is empty')
         return self.list[len(self.list)-1]
 
+    # delete all elemeents in list
+    def delete_all_elements(self):
+        self.list = None
+        return 'all elements are  deleted in list'
 
 
     # print_all
