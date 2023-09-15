@@ -61,6 +61,10 @@ if __name__=='__main__':
     stack.print_all()
     #print('pop last element:', stack.pop_last_element())
 
+    #print('top element of the list is :', stack.get_peek_element())
+
+    print(stack.delete_all_elements())
+
     stack.print_all()
 
 
