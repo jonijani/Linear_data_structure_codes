@@ -3,7 +3,12 @@ class Stack:
         self.list = []
         self.max_size = max_size
     
-
+    # is stack empty
+    def is_empty(self):
+        if self.list == []:
+            return True
+        else:
+            return False
 
 
 
@@ -12,6 +17,8 @@ class Stack:
 
 if __name__=='__main__':
     stack = Stack(10)
+
+    print('is it empty ? :',stack.is_empty())
 
 
 
