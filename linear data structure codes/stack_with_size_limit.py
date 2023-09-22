@@ -17,6 +17,13 @@ class Stack:
         else:
             return False
 
+    # add element to stack
+    def add_element_stack(self,value):
+        if self.is_stack_full():
+            return 'stack is full new element cant be added'
+        elif len(self.list) == self.max_size:
+                return 'new element cant be added as max limit exceeded'
+        return self.list.append(value)
 
 
   
