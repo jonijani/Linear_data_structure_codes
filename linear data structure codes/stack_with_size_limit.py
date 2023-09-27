@@ -26,6 +26,11 @@ class Stack:
         return self.list.append(value)
 
 
+        # pop top element of stack
+    def pop_top_element_in_stack(self):
+        if self.is_empty():
+            return 'stack is empty'
+        return self.list.pop()
   
     
 
