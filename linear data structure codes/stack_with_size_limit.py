@@ -31,6 +31,13 @@ class Stack:
         if self.is_empty():
             return 'stack is empty'
         return self.list.pop()
+    
+    def get_top_element_value(self):
+        if self.is_empty():
+            return 'stack is empty'
+        return self.list[len(self.list)-1]
+    
+
   
     
 
