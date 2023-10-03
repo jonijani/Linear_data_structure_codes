@@ -37,6 +37,13 @@ class Stack:
             return 'stack is empty'
         return self.list[len(self.list)-1]
     
+        # delete all elements in list
+    def delete_all_elements_in_stack(self):
+        if self.is_empty():
+            return 'its already empty'
+        self.list.clear()
+        return 'all elements are deleted'
+    
 
   
     
