@@ -44,6 +44,13 @@ class Stack:
         self.list.clear()
         return 'all elements are deleted'
     
+        # print_all elements
+    def print_all(self):
+        if self.is_empty():
+            print('nothing to print')
+            return 'stack is empty nothing to print'
+        for i in range(len(self.list),0,-1):
+            print(i)
 
   
     
