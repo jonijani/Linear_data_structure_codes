@@ -60,6 +60,31 @@ if __name__=='__main__':
 
     print('is it empty ? :',stack.is_empty())
 
+     #stack.add_element_stack(v1)
+    # print('is it empty ? :',stack.is_empty())
+
+    # print('is stack full ? :',stack.is_stack_full())
+
+    #v1 = Stack(1)
+
+    stack.add_element_stack(1)
+    stack.add_element_stack(2)
+    stack.add_element_stack(3)
+    stack.add_element_stack(4)
+    stack.add_element_stack(5)
+    stack.add_element_stack(6)
+    # stack.pop_top_element_in_stack()
+
+
+   
+
+    # print('top element value is : ',stack.get_top_element_value())
+    
+    #stack.delete_all_elements_in_stack()
+    stack.print_all()
+    stack.delete_all_elements_in_stack()
+    stack.print_all()
+
 
 
 
