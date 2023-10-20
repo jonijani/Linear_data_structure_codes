@@ -10,7 +10,10 @@ class Queue:
             return False
 
 
-
+  # add elements at end of the queue
+    def enqueue(self, value):
+        self.elements.append(value)
+        return "value added in queue list"
 
 
 
