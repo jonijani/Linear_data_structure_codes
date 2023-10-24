@@ -14,6 +14,13 @@ class Queue:
     def enqueue(self, value):
         self.elements.append(value)
         return "value added in queue list"
+    
+      # pop dequeue element
+    def dequeue(self):
+        if self.is_empty():
+            return "queue is empty can not pop first element"
+            self.elements.pop(0)
+            return "first element is removed "
 
 
 
