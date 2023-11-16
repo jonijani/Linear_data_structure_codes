@@ -21,6 +21,11 @@ class Queue:
             return "queue is empty can not pop first element"
             self.elements.pop(0)
             return "first element is removed "
+      #get top value
+    def peek(self):
+      if self.is_empty():
+        return "queue is empty can show top element"
+      return self.elements[0]
 
 
 
