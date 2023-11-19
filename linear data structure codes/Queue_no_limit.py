@@ -26,6 +26,13 @@ class Queue:
       if self.is_empty():
         return "queue is empty can show top element"
       return self.elements[0]
+    
+      # delete all elements in queue
+    def delete_all(self):
+      if self.is_empty():
+        return "queue is empty can not delete all elements "
+      self.elements.clear()
+      return 'all deleted '
 
 
 
