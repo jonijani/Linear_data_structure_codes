@@ -33,6 +33,13 @@ class Queue:
         return "queue is empty can not delete all elements "
       self.elements.clear()
       return 'all deleted '
+    
+      # print all elements
+    def print_all(self):
+      if self.is_empty():
+        return "Queue is empty nothing to print"
+      for i in self.elements:
+        print(i)
 
 
 
