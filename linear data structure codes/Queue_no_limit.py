@@ -52,3 +52,13 @@ if __name__ == "__main__":
     q.enqueue(3)
     q.enqueue(4)
     q.enqueue(5)
+
+    print("is queue emppty ? : ", q.is_empty())
+
+    q.print_all()
+
+    q.dequeue()
+
+    q.print_all()
+
+    print('top element is : ', q.peek())
