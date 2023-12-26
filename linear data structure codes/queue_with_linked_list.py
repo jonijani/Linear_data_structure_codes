@@ -8,3 +8,7 @@ class linkedList:
   def __init__(self):
       self.head = None
       self.tail = None
+
+class CircularQueue:
+  def __init__(self):
+      self.ll = linkedList()
